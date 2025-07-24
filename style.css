@@ -34,5 +34,29 @@ font-weight: bold;
 }
 footer{
   background-color: #4B3832;
-
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+}
+footer p{
+  color: #D9B382 ;
+}
+.redes-sociais{
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 10px 0;
+}
+.redes-sociais a {
+  color:#D9B382 ;
+  text-decoration: none;
+  font-weight: bold;
+}
+.redes-sociais a :hover{
+  color:#FFF8F0;
+}
+.redes-sociais i{
+  margin-right: 4px;
 }
