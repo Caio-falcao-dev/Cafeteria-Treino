@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -15,11 +15,18 @@
 
 body {
   background-color: var(--bege-claro);
+  padding-top: 100px; /* Compensa o header fixo */
 }
 
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: var(--marrom-escuro);
-  padding: 10px 20px;
+  padding: 30px 20px;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 .container-header {
@@ -28,35 +35,49 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 20px;
 }
 
 .logo {
-  height: 200px;
-  object-fit: contain;
+  height: 60px;                /* controla a altura dentro do header */
+  width: auto;
+  transform: scale(2.2);       /* aumenta visualmente a imagem */
+  transform-origin: left center;
+  display: block;
+  
+  filter: brightness(1.5) contrast(1.2);
+
 }
 
 .hero {
-  max-width: 1200px;
-  background-color: var(--bege-claro);
-  margin: 40px auto;
-  padding: 40px 20px;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   text-align: center;
-  gap: 20px;
+  padding: 100px 20px 0;
+  background-color: #fef6e5;
+  gap: 30px;
+  background-image: url(logo-aurora.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 500px;
 }
+
 .hero h1 {
   font-size: 3rem;
   color: var(--marrom-escuro);
   line-height: 1.2;
 }
+
 .hero p {
   font-size: 1.25rem;
   color: var(--marrom-amadeirado);
   margin-bottom: 20px;
 }
-.hero button{
+
+.hero button {
   background-color: var(--marrom-amadeirado);
   color: var(--branco-gelo);
   padding: 15px 25px;
@@ -65,7 +86,8 @@ header {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-.hero button:hover{
+
+.hero button:hover {
   background-color: var(--marrom-escuro);
 }
 
@@ -73,12 +95,20 @@ header {
   list-style: none;
   display: flex;
   gap: 20px;
+  justify-content: center;
 }
 
 .menu a {
   color: var(--branco-gelo);
   text-decoration: none;
-  font-weight: bold;
+  display: flex;
+  justify-content: flex-end;
+  align-content: flex-end;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+  color: var(--marrom-amadeirado);
 }
 
 footer {
@@ -91,7 +121,9 @@ footer {
 footer p {
   color: var(--marrom-amadeirado);
 }
-
+#cardapio{
+  background-color:#644d47;
+}
 .redes-sociais {
   list-style: none;
   padding: 0;
