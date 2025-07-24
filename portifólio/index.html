@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Café Aurora</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -11,56 +12,59 @@
         <nav>
             <ul>
                 <li><a href="#home">Início</a></li>
-                <li><a href="#Sobre">Sobre</a></li>
-                <li><a href="#Cardápio">#Cardápio</a></li>
-                <li><a href="#contato">#contato</a></li>
-                <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#cardapio">Cardápio</a></li>
+                <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
     </header>
-    <!--texto placeholder-->
-    <section class="hero">
+
+    <section class="hero" id="home">
         <h1>A melhor em cafés artesanais</h1>
-        <p>lorem</p>
+        <p>Lorem ipsum dolor sit amet.</p>
         <button>Conheça nossos cafés</button>
     </section>
-<main>
-    <section id="Cardapio">
-        <div id="Cafe1" class="pagina_cardapio">
-              <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=500&q=80" alt="Café Expresso">
-            <h3>café expresso</h3>
-            <p>6,00</p>
-        </div>
-        <div id="cafe2" class="pagina_cardapio2">
-            <img src="https://images.unsplash.com/photo-1534687941688-651ccaafbff8?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Capuccino">
-            <h3>Capuccino</h3>
-            <p>8,00</p>
-        </div>
-        <div id="cafe3" class="pagina_cardapio3">
-             <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=500&q=80" alt="Latte">
-             <h3>Latte</h3>
-             <p>9,00</p>
-        </div>
-        <div id="cafe4" class="pagina_cardapio4">
-             <img src="https://images.unsplash.com/photo-1627777620905-53a332869051?q=80&w=435&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mocha">
-             <h3>Mocha</h3>
-             <p>10,00</p>
-        </div>
+
+    <main>
+        <section id="cardapio">
+            <div class="pagina_cardapio">
+                <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=500&q=80" alt="Café Expresso">
+                <h3>Café Expresso</h3>
+                <p>R$ 6,00</p>
+            </div>
+            <div class="pagina_cardapio2">
+                <img src="https://images.unsplash.com/photo-1534687941688-651ccaafbff8?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Capuccino">
+                <h3>Capuccino</h3>
+                <p>R$ 8,00</p>
+            </div>
+            <div class="pagina_cardapio3">
+                <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=500&q=80" alt="Latte">
+                <h3>Latte</h3>
+                <p>R$ 9,00</p>
+            </div>
+            <div class="pagina_cardapio4">
+                <img src="https://images.unsplash.com/photo-1627777620905-53a332869051?q=80&w=435&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mocha">
+                <h3>Mocha</h3>
+                <p>R$ 10,00</p>
+            </div>
+        </section>
+    </main>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <p>Entre em contato conosco para pedidos ou dúvidas</p>
+        <form action="#" id="form-contato" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea name="mensagem" id="mensagem" rows="5" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
     </section>
-</main>
-        <Section id="contato">
-            <h2>Contato</h2>
-            <p>Entre em contato conosco para pedidos ou dúvidas</p>
-            <form action="#" id="form-contato" method="post">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="mensagem">mensagem:</label>
-                <textarea name="mensagem" id="mensagem" rows="5" required></textarea>
-                <button type="submit">Enviar</button>
-            </form>
-        </Section>
 </body>
 </html>
