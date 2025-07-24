@@ -1,47 +1,98 @@
 *{
   margin: 0;
   padding: 0;
-  box-sizing: border-box ;
-  font-family:'Poppins' ;
+  box-sizing: border-box;
+  font-family: 'Poppins';
 }
-body{
-  background-color: #FFF8F0;
+
+:root {
+  --marrom-escuro: #4B3832;      /* Fundo do header/rodapé */
+  --bege-claro: #FFF8F0;         /* Fundo geral da página */
+  --marrom-amadeirado: #D9B382;  /* Botões, destaques */
+  --branco-gelo: #FDFCFB;        /* Textos leves, contraste */
+  --cinza-suave: #DDD1C7;        /* Bordas, fundos de input */
 }
-header{
-  background-color: #4B3832;
+
+body {
+  background-color: var(--bege-claro);
+}
+
+header {
+  background-color: var(--marrom-escuro);
   padding: 10px 20px;
 }
-.container-header{
+
+.container-header {
   max-width: 1200px;
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.logo{
+
+.logo {
   height: 200px;
   object-fit: contain;
 }
-.menu{
+
+.hero {
+  max-width: 1200px;
+  background-color: var(--bege-claro);
+  margin: 40px auto;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+.hero h1 {
+  font-size: 3rem;
+  color: var(--marrom-escuro);
+  line-height: 1.2;
+}
+.hero p {
+  font-size: 1.25rem;
+  color: var(--marrom-amadeirado);
+  margin-bottom: 20px;
+}
+.hero button{
+  background-color: var(--marrom-amadeirado);
+  color: var(--branco-gelo);
+  padding: 15px 25px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.hero button:hover{
+  background-color: var(--marrom-escuro);
+}
+
+.menu {
   list-style: none;
   display: flex;
   gap: 20px;
 }
+
 .menu a {
-color: #fff8f0;
-text-decoration: none;
-font-weight: bold;
+  color: var(--branco-gelo);
+  text-decoration: none;
+  font-weight: bold;
 }
-footer{
-  background-color: #4B3832;
+
+footer {
+  background-color: var(--marrom-escuro);
   text-align: center;
   padding: 20px;
   font-size: 16px;
 }
-footer p{
-  color: #D9B382 ;
+
+footer p {
+  color: var(--marrom-amadeirado);
 }
-.redes-sociais{
+
+.redes-sociais {
   list-style: none;
   padding: 0;
   display: flex;
@@ -49,14 +100,17 @@ footer p{
   gap: 15px;
   margin: 10px 0;
 }
+
 .redes-sociais a {
-  color:#D9B382 ;
+  color: var(--marrom-amadeirado);
   text-decoration: none;
   font-weight: bold;
 }
-.redes-sociais a :hover{
-  color:#FFF8F0;
+
+.redes-sociais a:hover {
+  color: var(--bege-claro);
 }
-.redes-sociais i{
+
+.redes-sociais i {
   margin-right: 4px;
 }
