@@ -1,103 +1,122 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Café Aurora</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
-<body>
-   <header>
-  <div class="container-header">
-    <img src="/image.png" alt="Café Aurora" class="logo">
-    <nav>
-      <ul class="menu">
-        <li><a href="#home">Início</a></li>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#cardapio">Cardápio</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="style.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container-header">
+        <img src="image.png" alt="Café Aurora" class="logo" />
+        <nav>
+          <ul class="menu">
+            <li><a href="#home">Início</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#cardapio">Cardápio</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
     <section class="hero" id="home">
-       
-       
-        <h1>A melhor em cafés artesanais</h1>
-        <p>Lorem ipsum dolor sit amet.</p>
-        <button>Conheça nossos cafés</button>
+      <h1>A melhor em cafés artesanais</h1>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <button>Conheça nossos cafés</button>
     </section>
 
     <main>
-        <section id="cardapio">
-            <div class="pagina_cardapio">
-                <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=500&q=80" alt="Café Expresso">
-                <h3>Café Expresso</h3>
-                <p>R$ 6,00</p>
-            </div>
-            <div class="pagina_cardapio2">
-                <img src="https://images.unsplash.com/photo-1534687941688-651ccaafbff8?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Capuccino">
-                <h3>Capuccino</h3>
-                <p>R$ 8,00</p>
-            </div>
-            <div class="pagina_cardapio3">
-                <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=500&q=80" alt="Latte">
-                <h3>Latte</h3>
-                <p>R$ 9,00</p>
-            </div>
-            <div class="pagina_cardapio4">
-                <img src="https://images.unsplash.com/photo-1627777620905-53a332869051?q=80&w=435&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mocha">
-                <h3>Mocha</h3>
-                <p>R$ 10,00</p>
-            </div>
-        </section>
+      <section id="cardapio">
+        <div class="scroll-container">
+          <div class="pagina_cardapio">
+            <img
+              src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=500&q=80"
+              alt="Café Expresso"
+            />
+            <h3>Café Expresso</h3>
+            <p>R$ 6,00</p>
+          </div>
+          <div class="pagina_cardapio">
+            <img
+              src="https://images.unsplash.com/photo-1534687941688-651ccaafbff8?q=80&w=387&auto=format&fit=crop"
+              alt="Capuccino"
+            />
+            <h3>Capuccino</h3>
+            <p>R$ 8,00</p>
+          </div>
+          <div class="pagina_cardapio">
+            <img src="/glass-cappuccino-with-cream (1).jpg" alt="Latte" />
+            <h3>Latte</h3>
+            <p>R$ 9,00</p>
+          </div>
+          <div class="pagina_cardapio">
+            <img
+              src="https://images.unsplash.com/photo-1627777620905-53a332869051?q=80&w=435&auto=format&fit=crop"
+              alt="Mocha"
+            />
+            <h3>Mocha</h3>
+            <p>R$ 10,00</p>
+          </div>
+        </div>
+      </section>
     </main>
 
     <section id="contato">
-        <h2>Contato</h2>
-        <p>Entre em contato conosco para pedidos ou dúvidas</p>
-        <form action="#" id="form-contato" method="post">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
+      <h2>Contato</h2>
+      <p>Entre em contato conosco para pedidos ou dúvidas</p>
+      <form action="#" id="form-contato" method="post">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required />
 
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required />
 
-            <label for="mensagem">Mensagem:</label>
-            <textarea name="mensagem" id="mensagem" rows="5" required></textarea>
+        <label for="mensagem">Mensagem:</label>
+        <textarea name="mensagem" id="mensagem" rows="5" required></textarea>
 
-            <button type="submit">Enviar</button>
-        </form>
+        <button type="submit">Enviar</button>
+      </form>
     </section>
-    <footer>
-  <p>Siga o Café Aurora nas redes sociais:</p>
-  <ul class="redes-sociais">
-    <li>
-      <a href="https://instagram.com/cafeaurora" target="_blank">
-        <i class="fab fa-instagram"></i> Instagram
-      </a>
-    </li>
-    <li>
-      <a href="https://facebook.com/cafeaurora" target="_blank">
-        <i class="fab fa-facebook"></i> Facebook
-      </a>
-    </li>
-<li>
-  <a href="https://twitter.com/cafeaurora" target="_blank">
-    <i class="fab fa-x-twitter"></i> Twitter
-  </a>
-</li>
 
-    <li>
-      <a href="mailto:contato@cafeaurora.com">
-        <i class="fas fa-envelope"></i> E-mail
-      </a>
-    </li>
-  </ul>
-  <p>&copy; 2025 Café Aurora. Todos os direitos reservados.</p>
-</footer>
-</body>
+    <footer>
+      <p>Siga o Café Aurora nas redes sociais:</p>
+      <ul class="redes-sociais">
+        <li>
+          <a href="https://instagram.com/cafeaurora" target="_blank"
+            ><i class="fab fa-instagram"></i> Instagram</a
+          >
+        </li>
+        <li>
+          <a href="https://facebook.com/cafeaurora" target="_blank"
+            ><i class="fab fa-facebook"></i> Facebook</a
+          >
+        </li>
+        <li>
+          <a href="https://twitter.com/cafeaurora" target="_blank"
+            ><i class="fab fa-x-twitter"></i> Twitter</a
+          >
+        </li>
+
+        <li>
+          <a href="mailto:contato@cafeaurora.com"
+            ><i class="fas fa-envelope"></i> E-mail</a
+          >
+        </li>
+      </ul>
+      <p>&copy; 2025 Café Aurora. Todos os direitos reservados.</p>
+    </footer>
+  </body>
 </html>

@@ -2,22 +2,32 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins';
+  font-family: 'Poppins', sans-serif;
 }
 
 :root {
-  --marrom-escuro: #4B3832;      /* Fundo do header/rodapé */
-  --bege-claro: #FFF8F0;         /* Fundo geral da página */
-  --marrom-amadeirado: #D9B382;  /* Botões, destaques */
-  --branco-gelo: #FDFCFB;        /* Textos leves, contraste */
-  --cinza-suave: #DDD1C7;        /* Bordas, fundos de input */
+  --marrom-escuro: #4B3832;
+  --bege-claro: #FFF8F0;
+  --marrom-amadeirado: #D9B382;
+  --branco-gelo: #FDFCFB;
+  --cinza-suave: #DDD1C7;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: var(--bege-claro);
-  padding-top: 100px; /* Compensa o header fixo */
+  padding-top: 100px; /* para header fixo */
+  scroll-snap-type: y mandatory; /* scroll snap vertical obrigatório */
+  overflow-y: scroll;
 }
 
+/* Header */
 header {
   position: fixed;
   top: 0;
@@ -26,7 +36,7 @@ header {
   background-color: var(--marrom-escuro);
   padding: 30px 20px;
   z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .container-header {
@@ -39,30 +49,37 @@ header {
 }
 
 .logo {
-  height: 60px;                /* controla a altura dentro do header */
+  height: 60px;
   width: auto;
-  transform: scale(2.2);       /* aumenta visualmente a imagem */
+  transform: scale(2.2);
   transform-origin: left center;
   display: block;
-  
   filter: brightness(1.5) contrast(1.2);
-
 }
 
+/* Seções com altura total e scroll snap */
+section {
+  height: 100vh; /* altura igual a 100% da viewport */
+  scroll-snap-align: start; /* alinhamento do scroll snap */
+  scroll-snap-stop: always; /* forçar snap */
+  overflow: hidden; /* evita scroll interno */
+  padding: 40px 20px;
+}
+
+/* Hero */
 .hero {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 100px 20px 0;
   background-color: #fef6e5;
   gap: 30px;
   background-image: url(logo-aurora.png);
   background-repeat: no-repeat;
   background-position: center top;
   background-size: 500px;
+  padding-top: 100px; /* para compensar o padding padrão do section */
 }
 
 .hero h1 {
@@ -91,6 +108,7 @@ header {
   background-color: var(--marrom-escuro);
 }
 
+/* Menu */
 .menu {
   list-style: none;
   display: flex;
@@ -111,6 +129,101 @@ header {
   color: var(--marrom-amadeirado);
 }
 
+/* Cardápio com Scroll Snap horizontal */
+#cardapio {
+  background-color: #644d47;
+  padding: 0; /* já aplicado no section */
+  max-height: 100vh;
+}
+
+.scroll-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 20px;
+  scroll-padding: 20px;
+  padding: 20px;
+}
+
+.scroll-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: #d9b382;
+  border-radius: 4px;
+}
+
+.pagina_cardapio {
+  flex: 0 0 80%;
+  scroll-snap-align: center;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.pagina_cardapio img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Contato */
+#contato {
+  background-color: var(--branco-gelo);
+  text-align: center;
+}
+
+#contato h2 {
+  font-size: 2rem;
+  color: var(--marrom-escuro);
+  margin-bottom: 10px;
+}
+
+#contato p {
+  color: var(--marrom-amadeirado);
+  margin-bottom: 20px;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input,
+textarea {
+  padding: 10px;
+  border: 1px solid var(--cinza-suave);
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+button[type='submit'] {
+  background-color: var(--marrom-amadeirado);
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type='submit']:hover {
+  background-color: var(--marrom-escuro);
+}
+
+/* Footer */
 footer {
   background-color: var(--marrom-escuro);
   text-align: center;
@@ -121,9 +234,7 @@ footer {
 footer p {
   color: var(--marrom-amadeirado);
 }
-#cardapio{
-  background-color:#644d47;
-}
+
 .redes-sociais {
   list-style: none;
   padding: 0;
